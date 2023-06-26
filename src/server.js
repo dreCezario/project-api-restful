@@ -9,8 +9,8 @@ const app = express()
 // coneção com o banco de dados
 db.connect()
 
-// habilita o server parar receber dados via POST (formulário)
-app.use(express.urlencoded({ extended: true }))
+// habilita server para receber dados no formato JSON
+app.use(express.json())
 
 //rotas
 app.use('/api', routes)
